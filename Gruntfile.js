@@ -122,7 +122,7 @@ grunt.initConfig({
     icons: {
       src: '<%= paths.src %>/svg/*.svg',
       dest: '<%= paths.dist %>/fonts',
-      destCss: 'scss',
+      destCss: '<%= paths.src %>/scss',
       options: {
         engine: 'node',
         stylesheet: 'scss',
@@ -142,13 +142,15 @@ grunt.initConfig({
 	}
 });
 
-// 各種scssファイル、style.scss、アイコンフォントを用意。
+// 各種scssファイル、style.scss、アイコンフォントを用意
 grunt.registerTask('pre', ['copy', 'concat']);
-// ローカルホストサーバー用意。ファイルウオッチしつつブラウザオートリーロード。
+// ローカルホストサーバー用意。ファイルウオッチしつつブラウザオートリーロード
 grunt.registerTask('default', ['connect', 'browserSync', 'watch']);
-// style.css情報。
+// style.css情報
 grunt.registerTask('stats', ['stylestats']);
-// 画像圧縮。
+// Webfont作成
+grunt.registerTask('font', ['webfont']);
+// 画像圧縮
 grunt.registerTask('img', ['image']);
 
 };
