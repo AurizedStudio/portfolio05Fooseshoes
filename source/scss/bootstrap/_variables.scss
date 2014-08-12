@@ -12,16 +12,21 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 46.7%) !default; // #777
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+// $gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gray-dark: #242424; // .topbar bg, .navbar-gnav, .head-lead txt, .product-item txt, .addon txt .footer bg
+$gray: #2e2e2e; // .brandnav bg, .footer-middle, .footer-bottom
+$gray-light: #7d7d7d; // .footer-item ttl txt, .footer-middle placehodler, .footer-middle arrow bg
+$gray-lightt: #7e7e7e; // .topbar-right-login
+$gray-lighttt: #a4a4a4; // .footer-item txt
+$gray-lighter: #adadad; // badge bg, .brandnav currnet sub
+$gray-lighterr: #bcb5a7; // .product-item btn
+$gray-lightest: #c4c5bf; // .footer-item time txt
+$gray-addon :lighten(#000, 5%); // .addon-item bg
 
-$brand-primary:         #428bca !default;
+$brand-primary: #57c5a0; // FOOSESHOES GREEN         #428bca !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
+$brand-warning: #f27e4b; // FOOSESHOES ORANGE       #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 
@@ -30,7 +35,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg: #ebe7df; // FOOSESHOES white              #fff !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -850,5 +855,3 @@ $page-header-border-color:    $gray-lighter !default;
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
-
-
