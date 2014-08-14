@@ -13,14 +13,15 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //## Gray and brand colors for use across Bootstrap.
 
 // $gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark: #242424; // .topbar bg, .navbar-gnav, .head-lead txt, .product-item txt, .addon txt .footer bg
+$gray-dark: #242424; // .topbar bg, .nextbar-gnav, .head-lead txt, .product-item txt, .addon txt .footer bg
 $gray: #2e2e2e; // .brandnav bg, .footer-middle, .footer-bottom
 $gray-light: #7d7d7d; // .footer-item ttl txt, .footer-middle placehodler, .footer-middle arrow bg
 $gray-lightt: #7e7e7e; // .topbar-right-login
 $gray-lighttt: #a4a4a4; // .footer-item txt
-$gray-lighter: #adadad; // badge bg, .brandnav currnet sub
+$gray-lighter: #adadad; // .brandnav currnet sub
 $gray-lighterr: #bcb5a7; // .product-item btn
 $gray-lightest: #c4c5bf; // .footer-item time txt
+$gray-lightestt: #eee; // .nextbar-gnav border
 $gray-addon :lighten(#000, 5%); // .addon-item bg
 
 $brand-primary: #57c5a0; // FOOSESHOES GREEN         #428bca !default;
@@ -349,7 +350,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height: 60px; //                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;

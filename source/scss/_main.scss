@@ -12,11 +12,13 @@
 /**
  *  header
  */
+ /* .topbar */
 .topbar-outer {
     background-color:  $gray-dark;
 }
 .topbar {
     @extend .container;
+//    @extend .container-fluid;
     height: 45px;
 }
 .topbar-ci {
@@ -51,3 +53,72 @@
 .topbar-right-login {
     margin: 12px 20px 0 0;
 }
+/* .nextbar */
+.nextbar-outer {
+    background-color: #fff;
+}
+.nextbar {
+    @extend .container;
+    height: 60px;
+}
+.nextbar-gnav {
+    float: left;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    li {
+        float: left;
+        border-right: 1px $gray-lightestt solid;
+        &:first-child {
+            border-left: 1px $gray-lightestt solid;
+        }
+    }
+    a {
+        display: block;
+        height: 60px;
+        padding: 20px;
+        font-size: $font-size-md;
+        color: $gray-dark;
+        &:hover,
+        &:focus {
+            background-color: $gray-lightestt;
+            text-decoration: none;
+        }
+    }
+}
+    .nextbar-customer {
+        float: right;
+        ul {
+            list-style: none;
+        }
+        li {
+            float: left;
+            border-right: 1px $gray-lightest solid;
+            &:first-child {
+                border-left: 1px $gray-lightest solid;
+            }
+        }
+        a {
+            display: block;
+            height: 60px;
+            padding: 20px;
+            &:hover,
+            &:focus {
+                background-color: $gray-lightestt;
+                text-decoration: none;
+            }
+        }
+        .icon {
+            color: $gray-dark;
+        }
+        .badge {
+            margin: 0 0 0 10px;
+            border-radius: $border-radius-small;
+        }
+        .badge-cart {
+            background-color: $brand-primary;
+        }
+    }
+
