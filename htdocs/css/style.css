@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1336,7 +1337,7 @@ mark,
   text-transform: lowercase;
 }
 
-.text-uppercase {
+.text-uppercase, .addon-item-title {
   text-transform: uppercase;
 }
 
@@ -1626,31 +1627,26 @@ pre code {
   overflow-y: scroll;
 }
 
-.container, .topbar, .nextbar {
+.container, .topbar, .nextbar, .addon {
   margin-right: auto;
   margin-left: auto;
   padding: 0 10px 0;
 }
-.container:before, .topbar:before, .nextbar:before, .container:after, .topbar:after, .nextbar:after {
+.container:before, .topbar:before, .nextbar:before, .addon:before, .container:after, .topbar:after, .nextbar:after, .addon:after {
   content: " ";
   display: table;
 }
-.container:after, .topbar:after, .nextbar:after {
+.container:after, .topbar:after, .nextbar:after, .addon:after {
   clear: both;
 }
 @media (min-width: 768px) {
-  .container, .topbar, .nextbar {
+  .container, .topbar, .nextbar, .addon {
     width: 740px;
   }
 }
-@media (min-width: 992px) {
-  .container, .topbar, .nextbar {
+@media (min-width: 960px) {
+  .container, .topbar, .nextbar, .addon {
     width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container, .topbar, .nextbar {
-    width: 1160px;
   }
 }
 
@@ -2231,7 +2227,7 @@ pre code {
     margin-left: 100%;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 960px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md-13, .col-md-14, .col-md-15, .col-md-16 {
     float: left;
   }
@@ -3981,20 +3977,22 @@ tbody.collapse.in {
   }
 }
 
-.container > .navbar-header, .topbar > .navbar-header, .nextbar > .navbar-header,
+.container > .navbar-header, .topbar > .navbar-header, .nextbar > .navbar-header, .addon > .navbar-header,
 .container > .navbar-collapse,
 .topbar > .navbar-collapse,
 .nextbar > .navbar-collapse,
+.addon > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -10px;
   margin-left: -10px;
 }
 @media (min-width: 768px) {
-  .container > .navbar-header, .topbar > .navbar-header, .nextbar > .navbar-header,
+  .container > .navbar-header, .topbar > .navbar-header, .nextbar > .navbar-header, .addon > .navbar-header,
   .container > .navbar-collapse,
   .topbar > .navbar-collapse,
   .nextbar > .navbar-collapse,
+  .addon > .navbar-collapse,
   .container-fluid > .navbar-header,
   .container-fluid > .navbar-collapse {
     margin-right: 0;
@@ -4050,7 +4048,7 @@ tbody.collapse.in {
   text-decoration: none;
 }
 @media (min-width: 768px) {
-  .navbar > .container .navbar-brand, .navbar > .topbar .navbar-brand, .navbar > .nextbar .navbar-brand, .navbar > .container-fluid .navbar-brand {
+  .navbar > .container .navbar-brand, .navbar > .topbar .navbar-brand, .navbar > .nextbar .navbar-brand, .navbar > .addon .navbar-brand, .navbar > .container-fluid .navbar-brand {
     margin-left: -10px;
   }
 }
@@ -4608,7 +4606,7 @@ a.thumbnail.active {
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .visible-sm {
     display: block !important;
   }
@@ -4626,25 +4624,25 @@ a.thumbnail.active {
     display: table-cell !important;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .visible-sm-block {
     display: block !important;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .visible-sm-inline {
     display: inline !important;
   }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .visible-sm-inline-block {
     display: inline-block !important;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1199px) {
   .visible-md {
     display: block !important;
   }
@@ -4662,19 +4660,19 @@ a.thumbnail.active {
     display: table-cell !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1199px) {
   .visible-md-block {
     display: block !important;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1199px) {
   .visible-md-inline {
     display: inline !important;
   }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1199px) {
   .visible-md-inline-block {
     display: inline-block !important;
   }
@@ -4721,12 +4719,12 @@ a.thumbnail.active {
     display: none !important;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 959px) {
   .hidden-sm {
     display: none !important;
   }
 }
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 960px) and (max-width: 1199px) {
   .hidden-md {
     display: none !important;
   }
@@ -5178,7 +5176,7 @@ a.thumbnail.active {
 }
 
 /**
- *  header
+ *  ヘッダー（header）サイトロゴ、グロナビ、ブックマーク、カート
  */
 /* .topbar */
 .topbar-outer {
@@ -5187,6 +5185,9 @@ a.thumbnail.active {
 
 .topbar {
   height: 45px;
+}
+.ie8 .topbar {
+  width: 960px;
 }
 
 .topbar-ci {
@@ -5245,6 +5246,9 @@ a.thumbnail.active {
 
 .nextbar {
   height: 60px;
+}
+.ie8 .nextbar {
+  width: 960px;
 }
 
 .nextbar-gnav {
@@ -5305,6 +5309,54 @@ a.thumbnail.active {
 }
 .nextbar-customer .badge-cart {
   background-color: #57c5a0;
+}
+
+/**
+ *  アドオン（.addon）
+ */
+.ie8 .addon {
+  width: 960px;
+}
+.addon hr {
+  margin: 46px 0 27px 0;
+}
+
+.addon-item {
+  float: left;
+  background-color: #e0dbd5;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: 0 20px 0 0;
+  padding: 0 14px 10px;
+}
+
+.addon-shipping {
+  width: 220px;
+}
+
+.addon-test {
+  width: 220px;
+}
+
+.addon-blog {
+  width: 460px;
+  margin: 0;
+}
+
+.addon-item-title {
+  font-size: 14px;
+}
+
+.addon-blog-date {
+  background-color: #57c5a0;
+  width: 36px;
+  padding: 4px;
+  text-align: center;
+  color: #fff;
+}
+.addon-blog-date:hover, .addon-blog-date:focus {
+  color: #fff;
+  background-color: #2f8769;
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -22,7 +22,8 @@ $gray-lighter: #adadad; // .brandnav currnet sub
 $gray-lighterr: #bcb5a7; // .product-item btn
 $gray-lightest: #c4c5bf; // .footer-item time txt
 $gray-lightestt: #eee; // .nextbar-gnav border
-$gray-addon :lighten(#000, 5%); // .addon-item bg
+$gray-addon: rgba(0,0,0,.05); // .addon-item bg
+$gray-addon-fallback: #e0dbd5;
 
 $brand-primary: #57c5a0; // FOOSESHOES GREEN         #428bca !default;
 $brand-success:         #5cb85c !default;
@@ -292,7 +293,7 @@ $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
+$screen-md:                  960px !default;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;

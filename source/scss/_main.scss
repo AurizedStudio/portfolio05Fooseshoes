@@ -10,7 +10,7 @@
 // }
 
 /**
- *  header
+ *  ヘッダー（header）サイトロゴ、グロナビ、ブックマーク、カート
  */
  /* .topbar */
 .topbar-outer {
@@ -18,7 +18,9 @@
 }
 .topbar {
     @extend .container;
-//    @extend .container-fluid;
+    .ie8 & {
+        width: $screen-md ;
+    }
     height: 45px;
 }
 .topbar-ci {
@@ -60,6 +62,9 @@
 .nextbar {
     @extend .container;
     height: 60px;
+    .ie8 & {
+        width: $screen-md ;
+    }
 }
 .nextbar-gnav {
     float: left;
@@ -122,3 +127,49 @@
         }
     }
 
+/**
+ *  アドオン（.addon）
+ */
+.addon {
+    @extend .container;
+    .ie8 & {
+        width: $screen-md ;
+    }
+    hr {
+        margin: 46px 0 27px 0;
+    }
+}
+.addon-item {
+    float: left;
+    background-color: $gray-addon-fallback;
+    background-color: $gray-addon;
+    margin: 0 20px 0 0;
+    padding: 0 14px 10px;
+}
+.addon-shipping {
+    width: 220px;
+}
+.addon-test {
+    width: 220px;
+}
+.addon-blog {
+    width: 460px;
+    margin: 0;
+}
+.addon-item-title {
+    font-size: $font-size-base;
+    @extend .text-uppercase;
+}
+.addon-blog-date {
+    background-color: $brand-primary;
+    width: 36px;
+    padding: 4px;
+    text-align: center;
+    color: #fff;
+    &:hover,
+    &:focus {
+        color: #fff;
+        background-color: darken($brand-primary, 20%);
+        text-decoration: none;
+    }
+}
