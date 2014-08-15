@@ -13,14 +13,15 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //## Gray and brand colors for use across Bootstrap.
 
 // $gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gra-darker: #1c1c1c; // .footer-top divider
 $gray-dark: #242424; // .topbar bg, .nextbar-gnav, .head-lead txt, .product-item txt, .addon txt .footer bg
-$gray: #2e2e2e; // .brandnav bg, .footer-middle, .footer-bottom
-$gray-light: #7d7d7d; // .footer-item ttl txt, .footer-middle placehodler, .footer-middle arrow bg
+$gray: #2e2e2e; // .brandnav bg, .footer-middle, .footer-bottom bg
+$gray-light: #7d7d7d; // .footer-top-item ttl txt, .footer-middle placehodler, .footer-middle arrow bg
 $gray-lightt: #7e7e7e; // .topbar-right-login
-$gray-lighttt: #a4a4a4; // .footer-item txt
+$gray-lighttt: #a4a4a4; // .footer-top-item txt
 $gray-lighter: #adadad; // .brandnav currnet sub
 $gray-lighterr: #bcb5a7; // .product-item btn
-$gray-lightest: #c4c5bf; // .footer-item time txt
+$gray-lightest: #c4c5bf; // .footer-top-item time txt
 $gray-lightestt: #eee; // .nextbar-gnav border
 $gray-addon: rgba(0,0,0,.05); // .addon-item bg
 $gray-addon-fallback: #e0dbd5;
@@ -88,6 +89,7 @@ $headings-color:          inherit !default;
 //** Load fonts from this directory.
 
 // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
+$icon-font-path: "../fonts/";
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
 
 //** File name for all font files.
@@ -293,7 +295,7 @@ $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  960px !default;
+$screen-md:                  980px !default;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
