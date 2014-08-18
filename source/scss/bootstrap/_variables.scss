@@ -12,16 +12,24 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //
 //## Gray and brand colors for use across Bootstrap.
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 46.7%) !default; // #777
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
+// $gray-darker:            lighten(#000, 13.5%) !default; // #222
+$gra-darker: #1c1c1c; // .footer-top divider
+$gray-dark: #242424; // .topbar bg, .nextbar-gnav, .head-lead txt, .product-item txt, .addon txt .footer bg
+$gray: #2e2e2e; // .brandnav bg, .footer-middle input bg, .footer-bottom bg
+$gray-light: #7d7d7d; // .footer-top-item ttl txt, .footer-middle placehodler, .footer-middle arrow bg
+$gray-lightt: #7e7e7e; // .topbar-right-login
+$gray-lighttt: #a4a4a4; // .footer-top-item txt
+$gray-lighter: #adadad; // .brandnav currnet sub
+$gray-lighterr: #bcb5a7; // .product-item btn
+$gray-lightest: #c4c5bf; // .footer-top-item time txt
+$gray-lightestt: #eee; // .nextbar-gnav border
+$gray-addon: rgba(0,0,0,.05); // .addon-item bg
+$gray-addon-fallback: #e0dbd5;
 
-$brand-primary:         #428bca !default;
+$brand-primary: #57c5a0; // FOOSESHOES GREEN         #428bca !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
-$brand-warning:         #f0ad4e !default;
+$brand-warning: #f27e4b; // FOOSESHOES ORANGE       #f0ad4e !default;
 $brand-danger:          #d9534f !default;
 
 
@@ -30,7 +38,7 @@ $brand-danger:          #d9534f !default;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #fff !default;
+$body-bg: #ebe7df; // FOOSESHOES white              #fff !default;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark !default;
 
@@ -51,6 +59,7 @@ $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace !def
 $font-family-base:        $font-family-sans-serif !default;
 
 $font-size-base:          14px !default;
+$font-size-md: ceil(($font-size-base * 1.14)); // 16px
 $font-size-large:         ceil(($font-size-base * 1.25)) !default; // ~18px
 $font-size-small:         ceil(($font-size-base * 0.85)) !default; // ~12px
 
@@ -80,6 +89,7 @@ $headings-color:          inherit !default;
 //** Load fonts from this directory.
 
 // [converter] Asset helpers such as Sprockets and Node.js Mincer do not resolve relative paths
+$icon-font-path: "../fonts/";
 $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/") !default;
 
 //** File name for all font files.
@@ -150,8 +160,11 @@ $table-border-color:            #ddd !default;
 $btn-font-weight:                normal !default;
 
 $btn-default-color:              #333 !default;
+$btn-default-color: $gray;
 $btn-default-bg:                 #fff !default;
+$btn-default-bg: $gray-light;
 $btn-default-border:             #ccc !default;
+$btn-default-border: $gray-light;
 
 $btn-primary-color:              #fff !default;
 $btn-primary-bg:                 $brand-primary !default;
@@ -285,7 +298,7 @@ $screen-tablet:              $screen-sm-min !default;
 
 // Medium screen / desktop
 //** Deprecated `$screen-md` as of v3.0.1
-$screen-md:                  992px !default;
+$screen-md:                  980px !default;
 $screen-md-min:              $screen-md !default;
 //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:             $screen-md-min !default;
@@ -308,9 +321,9 @@ $screen-md-max:              ($screen-lg-min - 1) !default;
 //## Define your custom responsive grid.
 
 //** Number of columns in the grid.
-$grid-columns:              12 !default;
+$grid-columns: 16; //              12 !default;
 //** Padding between columns. Gets divided in half for the left and right.
-$grid-gutter-width:         30px !default;
+$grid-gutter-width: 20px; //         30px !default;
 // Navbar collapse
 //** Point at which the navbar becomes uncollapsed.
 $grid-float-breakpoint:     $screen-sm-min !default;
@@ -343,7 +356,7 @@ $container-lg:                 $container-large-desktop !default;
 //##
 
 // Basics of a navbar
-$navbar-height:                    50px !default;
+$navbar-height: 60px; //                    50px !default;
 $navbar-margin-bottom:             $line-height-computed !default;
 $navbar-border-radius:             $border-radius-base !default;
 $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
@@ -850,5 +863,3 @@ $page-header-border-color:    $gray-lighter !default;
 $dl-horizontal-offset:        $component-offset-horizontal !default;
 //** Horizontal line color.
 $hr-border:                   $gray-lighter !default;
-
-
