@@ -1,13 +1,21 @@
-// google font
-// @import url(http://fonts.googleapis.com/css?family=Bitter);
-
-// Sprite image
-// &.social-rss a {
-//     @include sprite($item-sns01-rss);
-// }
-
-// @media ( max-width: $screen-sm-max ) { // 939px
-// }
+/**
+ *  共通部品
+ */
+/* 値段タグ */
+.pricetag {
+    background-color: $brand-primary;
+    width: 68px;
+    height: 67px;
+    padding: 26px 8px;
+    line-height: 1;
+    color: #fff;
+}
+.pricetag-out {
+    background-color: $brand-warning;
+}
+.pricetag-onsale {
+    background-color: $gray-dark;
+}
 
 /**
  *  ヘッダー（header）サイトロゴ、グロナビ、ブックマーク、カート
@@ -128,6 +136,46 @@
     }
 
 /**
+ *  リード（.head-lead）
+ */
+.head-lead-outer {
+    background-color: #fff;
+    background-image: url(../img/bg-head-lead.png);
+    background-repeat: repeat-x;
+    height: 460px;
+}
+.head-lead {
+    @extend .container;
+    position: relative;
+    .ie8 & {
+        width: $screen-md ;
+    }
+}
+.head-lead-img {
+    @include img-retina("../img/pic-head-lead.png", "../img/pic-head-lead@2x.png", 668px, 460px);
+    width: 668px;
+    height: 460px;
+    margin: 0 0 0 -140px;
+    overflow: visible;
+}
+.head-lead-txt {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    width: 420px;
+}
+.head-lead-title {
+    margin: 10px 0;
+    line-height: $headings-line-height;
+    font-size: $font-size-h1;
+}
+.head-lead-exp {
+    line-height: $line-height-large;
+    font-size: $font-size-xlarge;
+}
+
+
+/**
  *  アドオン（.addon）
  */
 .addon {
@@ -162,8 +210,9 @@
 }
 .addon-blog-date {
     background-color: $brand-primary;
-    width: 36px;
+    width: 44px;
     padding: 4px;
+    line-height: $line-height-large;
     text-align: center;
     color: #fff;
     &:hover,
@@ -315,3 +364,14 @@
     }
 }
 
+// 記述例
+// google font
+// @import url(http://fonts.googleapis.com/css?family=Bitter);
+
+// Sprite image
+// &.social-rss a {
+//     @include sprite($item-sns01-rss);
+// }
+
+// @media ( max-width: $screen-sm-max ) { // 939px
+// }
