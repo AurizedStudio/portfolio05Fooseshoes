@@ -5010,6 +5010,9 @@ a.thumbnail.active {
 .footer-top {
   color: #a4a4a4;
 }
+.ie8 .footer-top {
+  width: 980px;
+}
 
 .footer-top-item {
   float: left;
@@ -5051,19 +5054,32 @@ a.thumbnail.active {
   background-color: #242424;
 }
 
+.ie8 .footer-middle {
+  width: 980px;
+}
+
 .footer-middle-form {
   float: left;
   margin: 40px 0 40px 40px;
 }
-.footer-middle-form .input-group .form-control {
+.ie8 .footer-middle-form {
+  margin: 24px 0 40px 40px;
+}
+.footer-middle-form .form-group .input-group .form-control {
   background-color: #2e2e2e;
   color: #a4a4a4;
   border-color: #2e2e2e;
   border-radius: 0;
 }
-.footer-middle-form .btn {
+.ie8 .footer-middle-form .form-group .input-group {
+  float: left;
+}
+.footer-middle-form .form-group .btn {
   margin: 0 0 0 -4px;
   border-radius: 0;
+}
+.ie8 .footer-middle-form .form-group .btn {
+  float: left;
 }
 
 .footer-middle-sns {
@@ -5091,4 +5107,43 @@ a.thumbnail.active {
 }
 
 /* .footer-bottom */
+.footer-bottom-outer {
+  background-color: #2e2e2e;
+}
+
+.footer-bottom {
+  color: gray;
+}
+.ie8 .footer-bottom {
+  width: 980px;
+}
+.footer-bottom .copyright {
+  float: left;
+  margin: 20px 0;
+}
+.footer-bottom .subnav {
+  float: right;
+  margin: 30px 0;
+}
+.footer-bottom .subnav ul {
+  list-style: none;
+}
+.footer-bottom .subnav li {
+  float: left;
+  margin: 0 0 0 6px;
+}
+.footer-bottom .subnav li:before {
+  content: "/";
+  margin: 0 6px 0 0;
+}
+.footer-bottom .subnav li:first-child:before {
+  content: "";
+}
+.footer-bottom .subnav a {
+  color: gray;
+}
+.footer-bottom .subnav a:hover, .footer-bottom .subnav a:focus {
+  text-decoration: none;
+}
+
 /*# sourceMappingURL=style.css.map */

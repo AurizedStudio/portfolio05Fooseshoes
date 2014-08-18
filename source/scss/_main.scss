@@ -185,6 +185,9 @@
 .footer-top {
     @extend .container;
     color: $gray-lighttt;
+    .ie8 & {
+        width: $screen-md ;
+    }
 }
 .footer-top-item {
     float: left;
@@ -219,23 +222,35 @@
 }
 .footer-middle {
     @extend .container;
+    .ie8 & {
+        width: $screen-md ;
+    }
 }
 .footer-middle-form {
     float: left;
     margin: 40px 0 40px 40px;
+    .ie8 & {
+        margin: 24px 0 40px 40px;
+    }
+    .form-group {
     .input-group {
-//            background-color: $gray;
         .form-control {
             background-color: $gray;
-//        height: 36px;
             color: $gray-lighttt;
             border-color: $gray;
             border-radius: 0;
+        }
+        .ie8 & {
+            float: left;
         }
     }
     .btn {
         margin: 0 0 0 -4px;
         border-radius: 0;
+        .ie8 & {
+            float: left;
+        }
+    }
     }
 }
 .footer-middle-sns {
@@ -258,12 +273,45 @@
     }
 }
 /* .footer-bottom */
+.footer-bottom-outer {
+    background-color: $gray;
+}
 .footer-bottom {
     @extend .container;
-}
-.footer-1stouter {
-}
-.footer-lastouter {
-//    background-color: $gray;
+    color: darken(#fff, 50%);
+    .ie8 & {
+        width: $screen-md ;
+    }
+    .copyright {
+        float: left;
+        margin: 20px 0;
+    }
+    .subnav {
+        float: right;
+        margin: 30px 0;
+        ul {
+            list-style: none;
+        }
+        li {
+            float: left;
+            margin: 0 0 0 6px;
+            &:before {
+                content: "/";
+                margin: 0 6px 0 0;
+            }
+            &:first-child {
+                &:before {
+                    content: "";
+                }
+            }
+        }
+        a {
+            color: darken(#fff, 50%);
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
 }
 
