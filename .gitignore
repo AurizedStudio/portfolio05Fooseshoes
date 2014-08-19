@@ -1,7 +1,5 @@
 bower_components/
 node_modules/
 .sass-cache/
-<<<<<<< HEAD
-=======
 comp/1_Home-assets/
->>>>>>> develop
+comp/img-head-lead-assets/
