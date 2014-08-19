@@ -3679,7 +3679,8 @@ select[multiple].input-lg,
   background-color: #242424;
 }
 .btn-view:hover, .btn-view:focus, .btn-view:active {
-  background-color: #f2f2f2;
+  color: #57c5a0;
+  background-color: #fcfcfc;
 }
 
 .btn-cart {

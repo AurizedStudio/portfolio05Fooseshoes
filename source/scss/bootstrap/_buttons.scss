@@ -82,7 +82,8 @@
     &:hover,
     &:focus,
     &:active {
-        background-color: darken($btn-view-bg, 5%);
+        color: $brand-primary;
+        background-color: darken($btn-view-bg, 1%);
     }
 }
 // Cart type button as primary
