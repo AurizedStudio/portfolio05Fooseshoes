@@ -1,13 +1,23 @@
-// google font
-// @import url(http://fonts.googleapis.com/css?family=Bitter);
-
-// Sprite image
-// &.social-rss a {
-//     @include sprite($item-sns01-rss);
-// }
-
-// @media ( max-width: $screen-sm-max ) { // 939px
-// }
+/**
+ *  共通部品
+ */
+/* 値段タグ オンセール 売り切れ */
+.pricetag {
+    background-color: $brand-primary;
+    width: 80px;
+    height: 67px;
+    padding: 26px 8px;
+    line-height: 1;
+    text-align: center;
+    color: #fff;
+}
+.pricetag-onsale {
+    background-color: $gray-dark;
+}
+.pricetag-out {
+    background-color: $brand-warning;
+    padding: 18px 8px;
+}
 
 /**
  *  ヘッダー（header）サイトロゴ、グロナビ、ブックマーク、カート
@@ -128,6 +138,253 @@
     }
 
 /**
+ *  リード（.head-lead）
+ */
+.head-lead-outer {
+    background-color: #fff;
+    background-image: url(../img/bg-head-lead.png);
+    background-repeat: repeat-x;
+    height: 460px;
+}
+.head-lead {
+    @extend .container;
+    position: relative;
+    .ie8 & {
+        width: $screen-md ;
+    }
+}
+.head-lead-img {
+    @include img-retina("../img/pic-head-lead.png", "../img/pic-head-lead@2x.png", 668px, 460px);
+    width: 668px;
+    height: 460px;
+    margin: 0 0 0 -140px;
+    overflow: visible;
+}
+.head-lead-txt {
+    position: absolute;
+    top: 70px;
+    right: 40px;
+    width: 420px;
+}
+.head-lead-title {
+    margin: 10px 0;
+    line-height: $headings-line-height;
+    font-size: $font-size-h1;
+}
+.head-lead-exp {
+    line-height: $line-height-large;
+    font-size: $font-size-xlarge;
+}
+
+/**
+ *  メイン
+ *  ブランドナビゲーション（.brandnav）
+ */
+.brandnav-outer {
+    background-color: $gray;
+}
+.brandnav {
+    @extend .container;
+    position: relative;
+    background-image: url(../img/item-bg-bk.png);
+    background-repeat: no-repeat;
+    .ie8 & {
+        width: $screen-md ;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        float: left;
+        background-image: url(../img/item-bg-bk.png);
+        background-repeat: repeat-x;
+        background-color: $gray;
+        &.brandnav-divider {
+            background-image: url(../img/item-divider.png);
+            background-repeat: no-repeat;
+            background-position: center top;
+            width: 10px;
+            height: 74px;
+        }
+    }
+    a {
+        display: block;
+        width: 180px;
+        height: 84px - 2px;
+        margin: 2px 0 0 0;
+        padding: 10px 0 0 0;
+        line-height: $line-height-large;
+        text-align: center;
+        font-size: $font-size-large;
+        color: darken(#fff, 50%);
+        border-top: 6px #000 solid;
+        &:hover,
+        &:focus {
+            color: #fff;
+            text-decoration: none;
+            border-top: 6px $brand-primary solid;
+        }
+        &.active {
+            border-top: 6px $brand-primary solid;
+            color: #fff;
+            .brandnav-sub {
+                color: $gray-lighter;
+            }
+        }
+        .brandnav-sub {
+            font-size: $font-size-base;
+        }
+    }
+    .brandnav-shim {
+        position: absolute;
+        background-image: url(../img/item-bg-bk.png);
+        background-repeat: no-repeat;
+        width: 10px;
+        height: 10px;
+        top: 0;
+        right: 0;
+        .ie8 & {
+            right: 20px;
+        }
+    }
+}
+
+/**
+ *  メイン
+ *  スペシャル（.special）
+ */
+.special-outer {
+    background-color: $gray-dark;
+    padding: 20px 0;
+}
+.special {
+    @extend .container;
+    .ie8 & {
+        width: $screen-md ;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        float: left;
+        width: 300px;
+        height: 180px;
+        margin: 0 0 0 20px;
+        &:first-child {
+            margin: 0;
+        }
+        &.special-onsale {
+            @include img-retina("../img/pic-onsale.jpg", "../img/pic-onsale@2x.jpg", 300px, 180px);
+        }
+        &.special-offers {
+            @include img-retina("../img/pic-soffer.jpg", "../img/pic-soffer@2x.jpg", 300px, 180px);
+        }
+        &.special-must {
+            @include img-retina("../img/pic-musthave.jpg", "../img/pic-musthave@2x.jpg", 300px, 180px);
+        }
+        &:hover,
+        &:focus {
+            @include opacity(.8);
+        }
+    }
+    a {
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 180px;
+//        letter-spacing: .1em;
+        .special-inner {
+            display: block;
+            position: absolute;
+            background-color: #000;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 180px;
+            height: 60px;
+            margin: auto;
+            padding: 14px 0 0 0;
+            color: #fff;
+            text-align: center;
+            font-size: $font-size-xlarge;
+            @include opacity(.8);
+        }
+    }
+}
+
+/**
+ *  メイン
+ *  プロダクト（.product）
+ */
+.product {
+    @extend .container;
+    position: relative;
+    .ie8 & {
+        width: $screen-md ;
+    }
+}
+.product-title {
+    margin: 1em 0 .6em;
+    font-weight: normal;
+}
+.product-btn {
+    position: absolute;
+    top: 29px;
+    right: 10px;
+}
+.product-item {
+    position: relative;
+    float: left;
+    width: 300px;
+        margin: 0 0 0 20px;
+        &:first-child {
+            margin: 0;
+        }
+    .pricetag {
+        position: absolute;
+        top: 207px;
+        left: 6px;
+        z-index: 10;
+    }
+    .pricetag-onsale,
+    .pricetag-out {
+        top: 0;
+        left: auto;
+        right: 6px;
+    }
+    .product-item-img {
+        margin: 0;
+        border-bottom: 2px $body-bg solid;
+    }
+    .product-item-desc {
+        position: relative;
+        width: 300px;
+        height: 50px;
+        background-color: #fff;
+    }
+    .product-item-desc-name {
+//        display: none;
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        font-size: $font-size-xlarge;
+    }
+    .product-item-desc-nav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 4px;
+        right: 0;
+        padding: 0 22px;
+    }
+}
+
+/**
  *  アドオン（.addon）
  */
 .addon {
@@ -162,8 +419,9 @@
 }
 .addon-blog-date {
     background-color: $brand-primary;
-    width: 36px;
+    width: 44px;
     padding: 4px;
+    line-height: $line-height-large;
     text-align: center;
     color: #fff;
     &:hover,
@@ -315,3 +573,14 @@
     }
 }
 
+// 記述例
+// google font
+// @import url(http://fonts.googleapis.com/css?family=Bitter);
+
+// Sprite image
+// &.social-rss a {
+//     @include sprite($item-sns01-rss);
+// }
+
+// @media ( max-width: $screen-sm-max ) { // 939px
+// }

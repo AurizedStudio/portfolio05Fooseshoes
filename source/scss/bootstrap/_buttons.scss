@@ -76,7 +76,29 @@
 .btn-danger {
   @include button-variant($btn-danger-color, $btn-danger-bg, $btn-danger-border);
 }
-
+// View Type button as grey
+.btn-view {
+    @include button-variant($btn-view-color, $btn-view-bg, $btn-view-border);
+    &:hover,
+    &:focus,
+    &:active {
+        color: $brand-primary;
+        background-color: darken($btn-view-bg, 1%);
+    }
+}
+// Cart type button as primary
+.btn-cart {
+    @include button-variant($btn-cart-color, $btn-cart-bg, $btn-cart-border);
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: darken($btn-cart-bg, 5%);
+    }
+}
+// Product type button as brown
+.btn-product {
+    @include button-variant($btn-product-color, $btn-product-bg, $btn-product-border);
+}
 
 // Link buttons
 // -------------------------
@@ -131,6 +153,27 @@
 }
 .btn-xs {
   @include button-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $border-radius-small);
+}
+
+.btn-middle01 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    font-size: $font-size-small;
+    padding: 9px 0 0 0;
+//    @include button-size(14px, 12px, 18px, 1, 0);
+}
+.btn-middle02 {
+    width: 40px;
+    height: 40px;
+    border-radius: 0;
+    font-size: $font-size-base;
+//    @include button-size(14px, 12px, 18px, 1, 0);
+}
+.btn-kadowaku01 {
+    padding: 6px 20px;
+    border-radius: 0;
+    font-weight: bold;
 }
 
 
