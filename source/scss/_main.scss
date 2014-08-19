@@ -1,20 +1,22 @@
 /**
  *  共通部品
  */
-/* 値段タグ */
+/* 値段タグ オンセール 売り切れ */
 .pricetag {
     background-color: $brand-primary;
-    width: 68px;
+    width: 80px;
     height: 67px;
     padding: 26px 8px;
     line-height: 1;
+    text-align: center;
     color: #fff;
-}
-.pricetag-out {
-    background-color: $brand-warning;
 }
 .pricetag-onsale {
     background-color: $gray-dark;
+}
+.pricetag-out {
+    background-color: $brand-warning;
+    padding: 18px 8px;
 }
 
 /**
@@ -312,6 +314,73 @@
             font-size: $font-size-xlarge;
             @include opacity(.8);
         }
+    }
+}
+
+/**
+ *  メイン
+ *  プロダクト（.product）
+ */
+.product {
+    @extend .container;
+    position: relative;
+    .ie8 & {
+        width: $screen-md ;
+    }
+}
+.product-title {
+    margin: 1em 0 .6em;
+    font-weight: normal;
+}
+.product-btn {
+    position: absolute;
+    top: 29px;
+    right: 10px;
+}
+.product-item {
+    position: relative;
+    float: left;
+    width: 300px;
+        margin: 0 0 0 20px;
+        &:first-child {
+            margin: 0;
+        }
+    .pricetag {
+        position: absolute;
+        top: 207px;
+        left: 6px;
+        z-index: 10;
+    }
+    .pricetag-onsale,
+    .pricetag-out {
+        top: 0;
+        left: auto;
+        right: 6px;
+    }
+    .product-item-img {
+        margin: 0;
+        border-bottom: 2px $body-bg solid;
+    }
+    .product-item-desc {
+        position: relative;
+        width: 300px;
+        height: 50px;
+        background-color: #fff;
+    }
+    .product-item-desc-name {
+//        display: none;
+        position: absolute;
+        top: 10px;
+        left: 100px;
+        font-size: $font-size-xlarge;
+    }
+    .product-item-desc-nav {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 4px;
+        right: 0;
+        padding: 0 22px;
     }
 }
 

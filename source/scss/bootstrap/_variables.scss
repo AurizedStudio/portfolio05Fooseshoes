@@ -31,7 +31,7 @@ $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning: #f27e4b; // FOOSESHOES ORANGE       #f0ad4e !default;
 $brand-danger:          #d9534f !default;
-
+$brand-product: #bcb5a7; // FOOSESHOES BROWN
 
 //== Scaffolding
 //
@@ -194,6 +194,10 @@ $btn-view-border: transparent;
 $btn-cart-color: $brand-primary;
 $btn-cart-bg: #fff; //darken(#fff, 20%);
 $btn-cart-border: transparent;
+
+$btn-product-color: $brand-product;
+$btn-product-bg: lighten($brand-product, 20%);
+$btn-product-border: $brand-product;
 
 $btn-link-disabled-color:        $gray-light !default;
 

@@ -95,6 +95,10 @@
         background-color: darken($btn-cart-bg, 5%);
     }
 }
+// Product type button as brown
+.btn-product {
+    @include button-variant($btn-product-color, $btn-product-bg, $btn-product-border);
+}
 
 // Link buttons
 // -------------------------
@@ -165,6 +169,11 @@
     border-radius: 0;
     font-size: $font-size-base;
 //    @include button-size(14px, 12px, 18px, 1, 0);
+}
+.btn-kadowaku01 {
+    padding: 6px 20px;
+    border-radius: 0;
+    font-weight: bold;
 }
 
 
