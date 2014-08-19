@@ -250,6 +250,72 @@
 }
 
 /**
+ *  メイン
+ *  スペシャル（.special）
+ */
+.special-outer {
+    background-color: $gray-dark;
+    padding: 20px 0;
+}
+.special {
+    @extend .container;
+    .ie8 & {
+        width: $screen-md ;
+    }
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        float: left;
+        width: 300px;
+        height: 180px;
+        margin: 0 0 0 20px;
+        &:first-child {
+            margin: 0;
+        }
+        &.special-onsale {
+            @include img-retina("../img/pic-onsale.jpg", "../img/pic-onsale@2x.jpg", 300px, 180px);
+        }
+        &.special-offers {
+            @include img-retina("../img/pic-soffer.jpg", "../img/pic-soffer@2x.jpg", 300px, 180px);
+        }
+        &.special-must {
+            @include img-retina("../img/pic-musthave.jpg", "../img/pic-musthave@2x.jpg", 300px, 180px);
+        }
+        &:hover,
+        &:focus {
+            @include opacity(.8);
+        }
+    }
+    a {
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 180px;
+//        letter-spacing: .1em;
+        .special-inner {
+            display: block;
+            position: absolute;
+            background-color: #000;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 180px;
+            height: 60px;
+            margin: auto;
+            padding: 14px 0 0 0;
+            color: #fff;
+            text-align: center;
+            font-size: $font-size-xlarge;
+            @include opacity(.8);
+        }
+    }
+}
+
+/**
  *  アドオン（.addon）
  */
 .addon {
