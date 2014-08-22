@@ -28,19 +28,18 @@
 }
 .topbar {
     @extend .container;
+    position: relative;
     .ie8 & {
         width: $screen-md ;
     }
-    height: 45px;
 }
 .topbar-ci {
     @include text-hide;
     @include img-retina("../img/img-ci.png", "../img/img-ci@2x.png", 156px, 20px);
-    float: left;
     background-repeat: no-repeat;
     width: 156px;
     height: 20px;
-    margin: 12px 0 0 0;
+    margin: 20px auto 10px;
 }
 .topbar-right {
     float: right;
@@ -60,35 +59,100 @@
     }
 }
 .topbar-right-search {
+    margin: 20px 20px 14px 0;
+}
+.topbar-right-login {
+    margin: 21px 0 14px 0;
+}
+.topbar-gnav {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: $brand-primary;
+    a {
+        display: inline-block;
+        color: $brand-primary;
+    }
+    .glyphicon {
+        font-size: $font-size-large;
+    }
+}
+@media (min-width: $screen-sm-min) {
+.topbar {
+    height: 45px;
+}
+.topbar-ci {
+    float: left;
+    margin: 12px 0 0 0;
+}
+.topbar-right-search {
     margin: 10px 20px 0 0;
 }
 .topbar-right-login {
     margin: 12px 20px 0 0;
 }
+.topbar-gnav {
+    display: none;
+}
+}
+
 /* .nextbar */
 .nextbar-outer {
     background-color: #fff;
 }
 .nextbar {
     @extend .container;
-    height: 60px;
+    display: none;
     .ie8 & {
         width: $screen-md ;
     }
 }
+.nextbar-customer {
+    @include clearfix;
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    li {
+        float: left;
+        border-right: 1px $gray-lightest solid;
+        &:first-child {
+            border-left: 1px $gray-lightest solid;
+        }
+    }
+    a {
+        display: block;
+        height: 60px;
+        padding: 20px;
+        &:hover,
+        &:focus {
+            background-color: $gray-lightestt;
+            text-decoration: none;
+        }
+    }
+    .icon {
+        color: $gray-dark;
+    }
+    .badge {
+        margin: 0 0 0 10px;
+        border-radius: $border-radius-small;
+    }
+    .badge-cart {
+        background-color: $brand-primary;
+    }
+}
 .nextbar-gnav {
-    float: left;
     ul {
         margin: 0;
         padding: 0;
         list-style: none;
     }
     li {
-        float: left;
-        border-right: 1px $gray-lightestt solid;
-        &:first-child {
-            border-left: 1px $gray-lightestt solid;
-        }
+        border-top: 1px $gray-lightestt solid;
     }
     a {
         display: block;
@@ -103,39 +167,46 @@
         }
     }
 }
-    .nextbar-customer {
-        float: right;
-        ul {
-            list-style: none;
+@media (min-width: $screen-sm-min) {
+.nextbar {
+    display: block;
+    height: 60px;
+}
+.nextbar-customer {
+    float: right;
+    li {
+        &:first-child {
+            border-left: 0;
         }
-        li {
-            float: left;
-            border-right: 1px $gray-lightest solid;
+    }
+    a {
+        padding: 20px 20px 20px 23px;
+    }
+}
+.nextbar-gnav {
+    float: left;
+    li {
+        float: left;
+        border-top: none;
+        border-right: 1px $gray-lightestt solid;
+        &:first-child {
+            border-left: 1px $gray-lightestt solid;
+        }
+    }
+}
+}
+@media (min-width: $screen-md-min) {
+.nextbar-customer {
+    li {
             &:first-child {
                 border-left: 1px $gray-lightest solid;
             }
-        }
-        a {
-            display: block;
-            height: 60px;
-            padding: 20px;
-            &:hover,
-            &:focus {
-                background-color: $gray-lightestt;
-                text-decoration: none;
-            }
-        }
-        .icon {
-            color: $gray-dark;
-        }
-        .badge {
-            margin: 0 0 0 10px;
-            border-radius: $border-radius-small;
-        }
-        .badge-cart {
-            background-color: $brand-primary;
-        }
     }
+    a: {
+        padding: 20px;
+    }
+}
+}
 
 /**
  *  リード（.head-lead）
@@ -155,25 +226,99 @@
 }
 .head-lead-img {
     @include img-retina("../img/pic-head-lead.png", "../img/pic-head-lead@2x.png", 668px, 460px);
-    width: 668px;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
     height: 460px;
-    margin: 0 0 0 -140px;
+    margin: 0;
     overflow: visible;
 }
 .head-lead-txt {
+    top: 0;
+    left: 0;
     position: absolute;
+    .pricetag {
+        margin: 220px 0 0 6px;
+    }
+    .head-lead-title {
+        position: absolute;
+        top: 220px;
+        left: 94px;
+        margin: 0;
+        line-height: $headings-line-height;
+        font-size: $font-size-h2;
+    }
+    .head-lead-exp {
+        margin:0 0 6px 6px;
+        font-size: $font-size-large;
+    }
+    .btn-group {
+        margin: 0 0 0 6px;
+    }
+}
+@media (min-width: $screen-iphone-hs) { // 480px
+.head-lead-txt {
+    .pricetag {
+        margin: 286px 0 0 6px;
+    }
+    .head-lead-title {
+        top: 286px;
+    }
+}
+}
+@media (min-width: $screen-iphone-h) { // 568px
+.head-lead-txt {
+    .pricetag {
+        margin: 6px 0 10px 6px;
+    }
+    .head-lead-title {
+        top: 0;
+        left: 100px;
+        font-size: $font-size-h1;
+    }
+    .head-lead-exp {
+        margin: 0 0 6px 6px;
+        line-height: $line-height-large;
+        font-size: $font-size-xlarge;
+    }
+    .btn-group {
+        margin: 276px 0 0 6px;
+    }
+}
+}
+@media (min-width: $screen-sm-min) { // 768px
+.head-lead-img {
+    background-size: 668px 460px;
+    width: 668px;
+    height: 460px;
+    margin: 0 0 0 -140px;
+}
+.head-lead-txt {
+    top: 16px;
+    left: auto;
+    right: 4px;
+    width: 300px;
+    .pricetag {
+        margin: 0;
+    }
+    .head-lead-title {
+        position: static;
+        margin: 10px 0;
+    }
+    .head-lead-exp {
+        margin: 0 0 12px 0;
+    }
+    .btn-group {
+        margin: 0;
+    }
+}
+}
+@media (min-width: $screen-md-min) { // 980px
+.head-lead-txt {
     top: 70px;
     right: 40px;
     width: 420px;
 }
-.head-lead-title {
-    margin: 10px 0;
-    line-height: $headings-line-height;
-    font-size: $font-size-h1;
-}
-.head-lead-exp {
-    line-height: $line-height-large;
-    font-size: $font-size-xlarge;
 }
 
 /**
