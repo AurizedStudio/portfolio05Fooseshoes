@@ -4614,8 +4614,6 @@ a.thumbnail.active {
 
 .brandnav {
   position: relative;
-  background-image: url(../img/item-bg-bk.png);
-  background-repeat: no-repeat;
 }
 .ie8 .brandnav {
   width: 980px;
@@ -4625,22 +4623,26 @@ a.thumbnail.active {
   margin: 0;
   padding: 0;
 }
+.brandnav ul:before, .brandnav ul:after {
+  content: " ";
+  display: table;
+}
+.brandnav ul:after {
+  clear: both;
+}
 .brandnav li {
   float: left;
   background-image: url(../img/item-bg-bk.png);
   background-repeat: repeat-x;
   background-color: #2e2e2e;
+  width: 50%;
 }
 .brandnav li.brandnav-divider {
-  background-image: url(../img/item-divider.png);
-  background-repeat: no-repeat;
-  background-position: center top;
-  width: 10px;
-  height: 74px;
+  display: none;
 }
 .brandnav a {
   display: block;
-  width: 180px;
+  width: 100%;
   height: 82px;
   margin: 2px 0 0 0;
   padding: 10px 0 0 0;
@@ -4666,18 +4668,44 @@ a.thumbnail.active {
   font-size: 14px;
 }
 .brandnav .brandnav-shim {
-  position: absolute;
-  background-image: url(../img/item-bg-bk.png);
-  background-repeat: no-repeat;
-  width: 10px;
-  height: 10px;
-  top: 0;
-  right: 0;
-}
-.ie8 .brandnav .brandnav-shim {
-  right: 20px;
+  display: none;
 }
 
+@media (min-width: 480px) {
+  .brandnav li {
+    width: 180px;
+  }
+  .brandnav a {
+    width: 180px;
+  }
+}
+@media (min-width: 980px) {
+  .brandnav {
+    background-image: url(../img/item-bg-bk.png);
+    background-repeat: no-repeat;
+  }
+  .brandnav li.brandnav-divider {
+    display: block;
+    background-image: url(../img/item-divider.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 10px;
+    height: 84px;
+  }
+  .brandnav .brandnav-shim {
+    display: block;
+    position: absolute;
+    background-image: url(../img/item-bg-bk.png);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 10px;
+    top: 0;
+    right: 0;
+  }
+  .ie8 .brandnav .brandnav-shim {
+    right: 20px;
+  }
+}
 /**
  *  メイン
  *  スペシャル（.special）
