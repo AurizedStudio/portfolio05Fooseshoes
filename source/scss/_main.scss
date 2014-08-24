@@ -756,12 +756,7 @@
     }
 }
 .footer-middle-form {
-    float: left;
-    margin: 40px 0 40px 40px;
-    .ie8 & {
-        margin: 24px 0 40px 40px;
-    }
-    .form-group {
+    margin: 0 0 40px 0;
     .input-group {
         .form-control {
             background-color: $gray;
@@ -774,17 +769,14 @@
         }
     }
     .btn {
-//        margin: 0 0 0 -4px;
         border-radius: 0;
         .ie8 & {
             float: left;
         }
     }
-    }
 }
 .footer-middle-sns {
-    float: right;
-    margin: 40px 40px 40px 0;
+    margin: 0 0 40px 0;
     ul {
         @include clearfix;
         margin: 0;
@@ -801,11 +793,17 @@
         }
     }
 }
-@media (min-width: $screen-sm-min) { // 768px
+@media (min-width: $screen-iphone-h) { // 568px
 .footer-middle-form {
-    .btn {
-        margin: 0 0 0 -4px;
+    float: left;
+    margin: 40px 0 40px 40px;
+    .ie8 & {
+        margin: 24px 0 40px 40px;
     }
+}
+.footer-middle-sns {
+    float: right;
+    margin: 40px 40px 40px 0;
 }
 }
 
