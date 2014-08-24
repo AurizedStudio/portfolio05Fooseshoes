@@ -5165,6 +5165,9 @@ a.badge:hover, a.badge:focus {
 .footer-middle-sns {
   margin: 0 0 20px 0;
 }
+.ie8 .footer-middle-sns {
+  margin: 22px 40px 26px 0;
+}
 .footer-middle-sns ul {
   margin: 0;
   padding: 0;

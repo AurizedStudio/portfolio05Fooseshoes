@@ -774,6 +774,9 @@
 }
 .footer-middle-sns {
     margin: 0 0 20px 0;
+    .ie8 & {
+        margin: 22px 40px 26px 0;
+    }
     ul {
         @include clearfix;
         margin: 0;
