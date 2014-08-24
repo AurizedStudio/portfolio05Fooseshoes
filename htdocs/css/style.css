@@ -4835,24 +4835,27 @@ a.thumbnail.active {
 }
 
 .product-title {
-  margin: 1em 0 .6em;
+  margin: 1em 0 0;
+  line-height: 1.1;
   font-weight: normal;
 }
 
 .product-btn {
-  position: absolute;
-  top: 29px;
-  right: 10px;
+  text-align: right;
+}
+
+.product-item-outer:before, .product-item-outer:after {
+  content: " ";
+  display: table;
+}
+.product-item-outer:after {
+  clear: both;
 }
 
 .product-item {
   position: relative;
-  float: left;
   width: 300px;
-  margin: 0 0 0 20px;
-}
-.product-item:first-child {
-  margin: 0;
+  margin: 0 auto 20px;
 }
 .product-item .pricetag {
   position: absolute;
@@ -4891,6 +4894,31 @@ a.thumbnail.active {
   padding: 0 22px;
 }
 
+@media (min-width: 568px) {
+  .product-title {
+    margin: 1em 0 .6em;
+  }
+
+  .product-btn {
+    position: absolute;
+    top: 29px;
+    right: 10px;
+  }
+}
+@media (min-width: 660px) {
+  .product-item {
+    float: left;
+    margin: 0 20px 20px 0;
+  }
+}
+@media (min-width: 980px) {
+  .product-item {
+    margin: 0 0 0 20px;
+  }
+  .product-item:first-child {
+    margin: 0;
+  }
+}
 /**
  *  アドオン（.addon）
  */

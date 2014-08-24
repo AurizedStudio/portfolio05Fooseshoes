@@ -494,7 +494,7 @@
     }
 }
 }
-@media (min-width: $screen-iphone-hs) and (max-width: 636px) { // 480px - 636px SPECIAL OFFERSのみに適用
+@media (min-width: $screen-iphone-hs) and (max-width: 636px) { // 480px - 636px .special-offersのみに適用
 .special {
     li {
         &.special-offers {
@@ -546,22 +546,21 @@
     }
 }
 .product-title {
-    margin: 1em 0 .6em;
+    margin: 1em 0 0;
+    line-height: $headings-line-height;
     font-weight: normal;
 }
 .product-btn {
-    position: absolute;
-    top: 29px;
-    right: 10px;
+    text-align: right;
+}
+.product-item-outer {
+    @include clearfix;
 }
 .product-item {
     position: relative;
-    float: left;
+//    float: none;
     width: 300px;
-        margin: 0 0 0 20px;
-        &:first-child {
-            margin: 0;
-        }
+    margin: 0 auto 20px;
     .pricetag {
         position: absolute;
         top: 207px;
@@ -600,6 +599,31 @@
         padding: 0 22px;
     }
 }
+@media (min-width: $screen-iphone-h) { // 568px
+.product-title {
+    margin: 1em 0 .6em;
+}
+.product-btn {
+    position: absolute;
+    top: 29px;
+    right: 10px;
+}
+}
+@media (min-width: 660px) { // 660px .product-itemのみに適用
+.product-item {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+}
+@media (min-width: $screen-md-min) { // 980px
+.product-item {
+    margin: 0 0 0 20px;
+    &:first-child {
+        margin: 0;
+    }
+}
+}
+
 
 /**
  *  アドオン（.addon）
