@@ -4938,16 +4938,15 @@ a.thumbnail.active {
 }
 
 .addon-shipping {
-  width: 220px;
+  width: 100%;
 }
 
 .addon-test {
-  width: 220px;
+  width: 100%;
 }
 
 .addon-blog {
-  width: 460px;
-  margin: 0;
+  width: 100%;
 }
 
 .addon-item-title {
@@ -4968,6 +4967,20 @@ a.thumbnail.active {
   text-decoration: none;
 }
 
+@media (min-width: 980px) {
+  .addon-shipping {
+    width: 220px;
+  }
+
+  .addon-test {
+    width: 220px;
+  }
+
+  .addon-blog {
+    width: 460px;
+    margin: 0;
+  }
+}
 /**
  *  フッター（.footer）
  */

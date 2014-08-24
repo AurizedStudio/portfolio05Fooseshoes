@@ -50,7 +50,9 @@ function productMenu(){
  * jquery.heightLine.js 要素の高さを揃える
  */
 function heightline(){
-    $(".addon-item").heightLine();
+    $(".addon-item").heightLine({
+        minWidth: 980
+        });
 }
 
  });

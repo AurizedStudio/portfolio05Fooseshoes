@@ -645,14 +645,13 @@
     padding: 0 14px 10px;
 }
 .addon-shipping {
-    width: 220px;
+    width: 100%;
 }
 .addon-test {
-    width: 220px;
+    width: 100%;
 }
 .addon-blog {
-    width: 460px;
-    margin: 0;
+    width: 100%;
 }
 .addon-item-title {
     font-size: $font-size-base;
@@ -671,6 +670,18 @@
         background-color: darken($brand-primary, 20%);
         text-decoration: none;
     }
+}
+@media (min-width: $screen-md-min) { // 980px
+.addon-shipping {
+    width: 220px;
+}
+.addon-test {
+    width: 220px;
+}
+.addon-blog {
+    width: 460px;
+    margin: 0;
+}
 }
 
 /**
