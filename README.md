@@ -1,7 +1,7 @@
 # Coding portfolio05
 
-This is 2 pages coding portfolio site.  
-Using Bootstrap.
+This is 2 pages coding portfolio site using Bootstrap.  
+[index](http://aurized-studio.jp/portfolio/fooseshoes/index.html) / products
 
 ## Design
 
@@ -11,7 +11,7 @@ Source PSDs are from [eCommerce Theme](https://dribbble.com/shots/1328390--PSD-e
 ## Coding
 
 Then I did coding for practice.  
-( I'm doing right now...)
+( Still I'm doing right now...)
 
 ## Licence
 

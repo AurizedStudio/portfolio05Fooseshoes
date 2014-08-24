@@ -1,7 +1,0 @@
-{
-  "name": "product",
-  "version": "0.0.0",
-  "devDependencies": {
-    "bootstrap-sass": "https://github.com/twbs/bootstrap-sass.git"
-  }
-}
