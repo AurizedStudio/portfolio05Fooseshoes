@@ -818,13 +818,13 @@
         width: $screen-md ;
     }
     .copyright {
-        float: left;
-        margin: 20px 0;
+        margin: 20px 10px;
     }
     .subnav {
-        float: right;
-        margin: 30px 0;
+        margin: 20px 0;
         ul {
+            @include clearfix;
+            padding: 0;
             list-style: none;
         }
         li {
@@ -848,6 +848,18 @@
             }
         }
     }
+}
+@media (min-width: $screen-sm-min) { // 768px
+.footer-bottom {
+    .copyright {
+        float: left;
+        margin: 20px 0;
+    }
+    .subnav {
+        float: right;
+        margin: 30px 0;
+    }
+}
 }
 
 // 記述例
